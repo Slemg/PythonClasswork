@@ -1,5 +1,5 @@
 import math
-d = int(input("Введите площадь круга "))
+d = int(input("Введите площадь круга: "))
 area = d**2/4*5
 length = math.pi * d
 a = (f"Площадь окружности круга: {area}")
