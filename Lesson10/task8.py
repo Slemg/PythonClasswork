@@ -1,13 +1,11 @@
 numbers = []
 k = 0
-a = int(input("Введите число №1 "))
-b = int(input("Введите число №2 "))
-c = int(input("Введите число №3 "))
-d = int(input("Введите число №4 "))
-numbers.append(a)
-numbers.append(b)
-numbers.append(c)
-numbers.append(d)
+n = int(input("Введите кол-во чисел: "))
+while True:
+    a = int(input("Введите значение: "))
+    numbers.append(a)
+    if len(numbers) >= n:
+        break
 for i in numbers:
-    k+=i
+    k += i
 print(k)
