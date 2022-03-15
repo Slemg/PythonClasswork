@@ -1,9 +1,11 @@
-def triangle(num1_triangle,num2_triangle):
-         mess = num1_triangle*num2_triangle
-         return mess
+import math
+
+def triangle(num1_triangle,num2_triangle): 
+        mess = num1_triangle*num2_triangle
+        return mess
 def compare(num1,num2,num3):
         if num1 + num2 > num3 and num1 + num3 > num2 and num2 + num3 > num1:
-            mess = "Треугольник существует!"
+            mess = "Треугольник существует!" 
         else:
             mess = "Треугольник не существует!"
         return mess
@@ -28,9 +30,10 @@ if num1 == "трикутник":
     y = compare(num1,num2,num3)
     print(y)
     if y == "Треугольник существует!":
-        num1_triangle = int(input('Длина стороны треугольника,на которую проведена высота? '))
-        num2_triangle = int(input('Высота треугольника? '))
-        zxc = triangle(num1_triangle,num2_triangle)
+        num1_halfperimetr = num1+num2+num3/2
+        num2_area = (num1_halfperimetr-num1)*(num1_halfperimetr-num2)*(num1_halfperimetr-num3)
+        num2_area = num2_area ** (0.5)
+        zxc = triangle(num1_halfperimetr,num2_area)
         print(f"Площадь треугольника: {zxc} см")
     else:
         print("Невозможно подсчитать площадь!")
